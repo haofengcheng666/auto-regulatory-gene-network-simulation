@@ -1,4 +1,11 @@
-# Supplementary code for the dissertation
+# Stochastic Simulation of an Auto-Regulatory Gene Network
+
+Supplementary code for my BSc dissertation (Durham University, Mathematics and Statistics). Compares the Gillespie SSA, fixed τ-leaping and adaptive τ-leaping on an auto-regulatory gene network, using 1,000 matched-seed replicates, paired bootstrap confidence intervals and distribution-level tests.
+
+**Key finding:** Fixed-step τ-leaping was about 2x faster than the exact SSA but roughly 6x less accurate (RMSE of mean P2), and triggered the numerical safeguard about 16,000 times per run on average. Adaptive τ-leaping matched SSA runtime on this model with roughly 6x lower RMSE than the fixed-step variants.
+
+![Runtime per method](figures/fig_runtime.png)
+![Runtime vs RMSE trade-off](figures/fig_tradeoff.png)
 
 R code and processed results for the N=1000 benchmark and the chapter 5
 figures (auto-regulatory gene network, SSA vs adaptive tau-leaping vs
